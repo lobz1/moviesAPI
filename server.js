@@ -5,7 +5,7 @@
 *  (including web sites) or distributed to other students.
 * 
 *  Name: Denys Moroz Student ID: 154298194 Date: 01/15/2023
-*  Cyclic Link: 
+*  Cyclic Link: https://clever-bee-veil.cyclic.app/
 *
 ********************************************************************************/ 
 
