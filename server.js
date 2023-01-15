@@ -29,7 +29,7 @@ app.post("/api/movies", function (req, res) {
     db.addNewMovie(req.body).then((data) => {
         res.status(201).json(data);
     }).catch(() => {
-        res.status(500).json({ err: "Unable to Add Movie" });
+        res.status(500).json({ err: "Unable to Add New Movies" });
     });
 });
 
@@ -48,7 +48,7 @@ app.get("/api/movies", function (req, res) {
   
     promise.then((data) => {
         if (data) res.json(data);
-        else res.json({ err: "No Movies Found" });
+        else res.json({ err: "No Movies were Found" });
     }).catch((err) => {
         res.status(500).json({ err: err });
     });
@@ -57,30 +57,30 @@ app.get("/api/movies", function (req, res) {
 app.get("/api/movies/:id", function (req, res) {
     db.getMovieById(req.params.id).then((data) => {
         if (data) res.json(data);
-        else res.json({ err: "No Movie Found with given id" });
+        else res.json({ err: "No Movie was Found with given id" });
     }).catch(() => {
-        res.status(500).json({ err: "Unable to retrieve Movie" });
+        res.status(500).json({ err: "Unable to retrieve New Movies" });
     });
 });
 
 app.put("/api/movies/:id", function (req, res) {
     db.updateMovieById(req.body, req.params.id).then(() => {
-        res.json({ success: "Movie Updated" });
+        res.json({ success: "Movie has been Updated" });
     }).catch(() => {
-        res.status(500).json({ err: "Unable to Update Movie" });
+        res.status(500).json({ err: "Unable to Update New Movies" });
     });
 });
 
 app.delete("/api/movies/:id", function (req, res) {
     db.deleteMovieById(req.params.id).then(() => {
-        res.status(200).json({ success: "Movie Deleted" });
+        res.status(200).json({ success: "Movie has been Deleted" });
     }).catch(() => {
-        res.status(500).json({ err: "Unable to Delete Movie" });
+        res.status(500).json({ err: "Unable to Delete New Movie" });
     });
 });
 
 app.use((req, res) => {
-    res.status(404).send("Resource not found");
+    res.status(404).send("Resource was not found");
   });
 
 db.initialize(process.env.MONGODB_CONN_STRING).then(()=>{
