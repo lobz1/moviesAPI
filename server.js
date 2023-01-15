@@ -4,8 +4,8 @@
 *  No part of this assignment has been copied manually or electronically from any other source
 *  (including web sites) or distributed to other students.
 * 
-*  Name: __Denys Moroz_______ Student ID: __154298194____ Date: _01/15/2023_______
-*  Cyclic Link: _______________________________________________________________
+*  Name: Denys Moroz Student ID: 154298194 Date: 01/15/2023
+*  Cyclic Link: 
 *
 ********************************************************************************/ 
 
