@@ -12,10 +12,11 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const dotenv = require("dotenv").config();
 const MoviesDB = require("./modules/moviesDB.js");
 const db = new MoviesDB();
+const dotenv = require("dotenv");
 
+dotenv.config();
 const HTTP_PORT = process.env.PORT || 8080;
 
 app.use(cors());
